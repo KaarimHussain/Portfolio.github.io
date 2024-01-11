@@ -216,28 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
      loaderAnimation();
 
-     // ContactMailerCode
-
-     emailjs.init("zpGXs1saQ3xvDJjvI");
-     const sendMailBtn = document.querySelector('.mailSendBtn');
-     sendMailBtn.addEventListener("click", sendMail);
-     function sendMail() {
-
-          const nameCon = document.getElementById('userName').value;
-          const subjectCon = document.getElementById('userSubject').value;
-          const Text = document.getElementById('userMsg').value;
-
-          emailjs.send("service_23fobx4", "template_nhcmg5f", {
-               to_email: "kaariminnocent@gmail.com",
-               subject: subjectCon,
-               message: Text
-          }).then(function () {
-               window.location.reload();
-          }), function (error) {
-               console.log(error);
-          };
-     };
-
      // FooterCode
 
      const footer = document.querySelector(".footer");

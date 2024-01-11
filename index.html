@@ -112,16 +112,20 @@
                </div>
                <div class="skills-container">
                     <div class="elem" data-image="./projectImg/biggest.PNG">
-                         <div class="overlay"></div>
-                         <h2>BIGGEST</h2>
+                         <a href="https://kaarimhussain.github.io/BIGGEST/">
+                              <div class="overlay"></div>
+                              <h2>BIGGEST</h2>
+                         </a>
                          <div class="aboutProg">
                               <i class="fa-solid fa-square"></i>
                               <small>E COMMERCE <sup>2023</sup></small>
                          </div>
                     </div>
                     <div class="elem" data-image="./projectImg/genbrand.PNG">
-                         <div class="overlay"></div>
-                         <h2>GENBRAND</h2>
+                         <a href="https://kaarimhussain.github.io/GENBRAND/">
+                              <div class="overlay"></div>
+                              <h2>GENBRAND</h2>
+                         </a>
                          <div class="aboutProg">
                               <i class="fa-solid fa-square"></i>
                               <small>AWWWARDS <sup>2023</sup></small>
@@ -136,16 +140,20 @@
                </div>
                <div class="skills-container">
                     <div class="elem" data-image="./projectImg/wiki.PNG">
-                         <div class="overlay"></div>
-                         <h2>WIKI SEARCH</h2>
+                         <a href="#">
+                              <div class="overlay"></div>
+                              <h2>WIKI SEARCH</h2>
+                         </a>
                          <div class="aboutProg">
                               <i class="fa-solid fa-square"></i>
                               <small>API</small>
                          </div>
                     </div>
                     <div class="elem" data-image="./projectImg/weather.PNG">
-                         <div class="overlay"></div>
-                         <h2>WEATHER APP</h2>
+                         <a href="#">
+                              <div class="overlay"></div>
+                              <h2>WEATHER APP</h2>
+                         </a>
                          <div class="aboutProg">
                               <i class="fa-solid fa-square"></i>
                               <small>API</small>
@@ -245,6 +253,28 @@
           </div>
      </div>
 
+     <script>
+          // Code for Contact Email
+          emailjs.init("zpGXs1saQ3xvDJjvI");
+          const sendMailBtn = document.querySelector('.mailSendBtn');
+          sendMailBtn.addEventListener("click", sendMail);
+          function sendMail() {
+
+               const nameCon = document.getElementById('userName').value;
+               const subjectCon = document.getElementById('userSubject').value;
+               const Text = document.getElementById('userMsg').value;
+
+               emailjs.send("service_23fobx4", "template_nhcmg5f", {
+                    to_email: "kaariminnocent@gmail.com",
+                    subject: subjectCon,
+                    message: Text
+               }).then(function () {
+                    window.location.reload();
+               }), function (error) {
+                    console.log(error);
+               };
+          };
+     </script>
      <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
