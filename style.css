@@ -786,9 +786,25 @@ body {
      width: 100%;
      display: flex;
      align-items: center;
-     justify-content: center;
+     justify-content: space-between;
 }
-
+.footerRight ul{
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     justify-content: center;
+     gap: 20px;
+     list-style: none;
+}
+.footerRight ul li a i{
+     color: #fff;
+     font-size:20px ;
+     transition: .3s ease all;
+}
+.footerRight ul li a i:hover{
+     color: #fe330a;
+     font-size:25px ;
+}
 .footer .nav-left h1 a {
      color: white;
 }
@@ -813,22 +829,4 @@ body {
 
 .footerContent small a:hover {
      text-decoration: line-through;
-}
-
-.footerRight form button {
-     padding: 10px;
-     min-width: 320px;
-     max-width: 500px;
-     background-color: #fe330a;
-     text-align: center;
-     font-weight: 500;
-     color: white;
-     cursor: pointer;
-     border: 1px solid transparent;
-     transition: all .3s ease;
-}
-
-.footerRight form button:hover {
-     background-color: transparent;
-     border: 1px solid #fe330a;
 }
