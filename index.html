@@ -242,14 +242,6 @@
                     <div class="nav-left">
                          <h1><a href="index.html"><span>Kaarim</span><br>Hussain</a></h1>
                     </div>
-                    <div class="footerRight">
-                         <form>
-                              <h1 style="text-align: center; color: white;font-weight: bold;">Contact Me!</h1>
-                              <input type="text" placeholder="Your Subject" id="userSubject">
-                              <textarea rows="5" cols="auto" placeholder="Your Message" id="userMsg"></textarea>
-                              <button type="button" class="mailSendBtn">Send</button>
-                         </form>
-                    </div>
                </div>
                <div class="footerContent">
                     <small>Made with ❤</small>
@@ -258,29 +250,6 @@
                </div>
           </div>
      </div>
-
-     <script>
-          // Code for Contact Email
-          emailjs.init("zpGXs1saQ3xvDJjvI");
-          const sendMailBtn = document.querySelector('.mailSendBtn');
-          sendMailBtn.addEventListener("click", sendMail);
-          function sendMail() {
-
-               const nameCon = document.getElementById('userName').value;
-               const subjectCon = document.getElementById('userSubject').value;
-               const Text = document.getElementById('userMsg').value;
-
-               emailjs.send("service_23fobx4", "template_nhcmg5f", {
-                    to_email: "kaariminnocent@gmail.com",
-                    subject: subjectCon,
-                    message: Text
-               }).then(function () {
-                    window.location.reload();
-               }), function (error) {
-                    console.log(error);
-               };
-          };
-     </script>
      <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
